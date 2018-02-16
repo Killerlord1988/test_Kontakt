@@ -1,0 +1,114 @@
+@keyframes growLine {
+  from {
+    width: 0
+  }
+  to {
+    width: 100px;
+  }
+}
+
+.header-nav {
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__list {
+    display: flex;
+    margin-bottom: 0;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: $spacer;
+    }
+  }
+  &__link {
+    position: relative;
+    text-transform: uppercase;
+    color: $colorPrimaryFirst;
+    font-size: $fontSize;
+    &:hover {
+      text-decoration: none;
+      color: $colorPrimaryFirst;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -$spacer/2;
+        width: 100%;
+        height: 2px;
+        background-color: $colorPrimaryFirst;
+        animation-name: growLine;
+        animation-timing-function: cubic-bezier(.29, .74, .99, .69);
+        animation-duration: 400ms;
+      }
+    }
+  }
+
+  & .hidden-nav {
+    display: none;
+    position: relative;
+    & .burger-menu {
+      cursor: pointer;
+      position: relative;
+      border-radius: 5px;
+      width: 50px;
+      height: 50px;
+      background-color: #a02f05;
+      & .burger {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 5px;
+        width: 30px;
+        background-color: $colorPrimaryFirst;
+        border-radius: 5px;
+      }
+      & .burger:first-child {
+        top: 25%;
+      }
+      & .burger:last-child {
+        top: 75%;
+      }
+    }
+    & .right-menu {
+      width: 200px;
+      position: absolute;
+      display: none;
+
+      right: 0;
+      background-color: #a02f05;
+      border-radius: 5px;
+      border: 1px solid $colorPrimarySecond;
+      z-index: 1;
+
+      & ul li {
+        margin: 10px auto;
+        text-align: center;
+        border-bottom: 1px solid $colorPrimaryFirst;
+        & a {
+          color: $colorPrimaryFirst;
+          text-transform: uppercase;
+        }
+      }
+    }
+    & .visible {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    & .hidden-nav {
+      display: block;
+    }
+    & .header-nav__list {
+      display: none;
+    }
+    .burger-menu {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{% set list = [
+    {href: "index.html", name:"The Products"},
+    {href:"services.html", name:"Services"},
+    {href:"contact.html", name:"Contact me"}
+] %}
+
+<nav class="header-nav">
+    <ul class="header-nav__list list-unstyled">
+        {% for item in list %}
+            <li class="header-nav__item">
+                <a href="{{ item.href }}" class="header-nav__link">
+                    {{ item.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="hidden-nav row">
+
+        <div id="burger-menu" class="burger-menu">
+            <span class="burger"></span>
+            <span class="burger"></span>
+            <span class="burger"></span>
+        </div>
+        <div id="right-menu" class="right-menu">
+            <ul class="list-unstyled">
+                <li><a href="index.html">The Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

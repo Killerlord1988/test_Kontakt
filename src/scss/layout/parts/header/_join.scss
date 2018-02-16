@@ -1,0 +1,32 @@
+.join {
+  position: absolute;
+  top: calc(496px / 2);
+  transform: translateY(-50%);
+  left: 60%;
+  display: flex;
+  flex-direction: column;
+  color: $colorPrimaryFirst;
+  & h2 {
+    margin-bottom: 0;
+    font-weight: 300;
+
+  }
+  & span {
+    margin-bottom: $spacer*1.25;
+  }
+  & .button-wrapper {
+    width: 156px;
+  }
+}
+
+@media (max-width: 768px) {
+  .join {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    & .button-wrapper {
+      margin: auto;
+    }
+  }
+}

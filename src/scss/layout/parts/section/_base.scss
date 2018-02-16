@@ -1,0 +1,45 @@
+.products-wrap {
+  margin: 120px 210px 106px;
+  & h3 {
+    font-size: $spacer*1.875;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  & p {
+    font-size: $spacer*0.875;
+    font-weight: 300;
+  }
+  .color-cube {
+    margin-top: 60px;
+    margin-left: 0;
+    & .cube {
+      width: 36px;
+      height: 36px;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+    & .color-cube__orange {
+      background-color: $cubeOrange;
+    }
+    & .color-cube__red {
+      background-color: $cubeRed;
+    }
+    & .color-cube__green {
+      background-color: $cubeGreen;
+    }
+    & .color-cube__black {
+      background-color: $cubeBlack;
+    }
+    & .color-cube__pink {
+      background-color: $cubePink;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .products-wrap {
+    margin: 25px 30px 30px ;
+  }
+}

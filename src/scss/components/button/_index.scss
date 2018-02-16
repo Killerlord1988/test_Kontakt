@@ -1,0 +1,20 @@
+.button {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  &--outline {
+    border: 2px solid $colorPrimaryFirst;
+    border-radius: $radiusBig;
+    color: $colorPrimaryFirst;
+    font-size: $fontSize*1.5;
+    &:hover {
+      background-color: $colorPrimaryFirst;
+      color: $colorPrimarySecond;
+      transition: 400ms;
+    }
+  }
+}

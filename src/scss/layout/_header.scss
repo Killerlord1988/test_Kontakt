@@ -1,0 +1,36 @@
+@keyframes movingBg {
+from {
+  background-position: 0 0;
+}
+50% {
+background-position: 0 20%;}
+to {background-position:0 0; }
+}
+
+.page-header {
+  animation-name: movingBg;
+  animation-duration: 8000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  height: 498px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: $spacer*1.25;
+
+  & .img-fluid {
+
+    &:hover {
+      filter: blur(2px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+animation: none;
+  }
+}
+
+@import "parts/parts";

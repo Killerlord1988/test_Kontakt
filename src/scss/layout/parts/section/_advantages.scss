@@ -1,0 +1,229 @@
+.advantages {
+  width: 100%;
+  color: $colorPrimaryFirst;
+
+  .advantages-block {
+    min-height: 305px;
+    & p {
+      font-size: 14px;
+      font-weight: 300;
+      padding-bottom: 100px;
+    }
+  }
+
+  .advantages-blocks {
+    position: relative;
+
+    & .b-plus {
+      position: absolute;
+      right: 43px;
+      bottom: 32px;
+      width: 36px;
+      height: 36px;
+      background-color: #272727;
+      border: none;
+      opacity: 0.6;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 4px;
+        background-color: $colorPrimaryFirst;
+        transform: translate(-50%, -50%);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 4px;
+        background-color: $colorPrimaryFirst;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+
+  .advantages-block__seo {
+    background-color: $cubeBlack;
+    width: 35%;
+    & img {
+      width: 28px;
+      height: 34px;
+    }
+    & .block-wrap {
+      margin-left: 128px;
+    }
+  }
+
+  .advantages-block__responsive {
+    background-color: $cubeRed;
+    width: 30%;
+    & img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .advantages-block__cloud {
+    background-color: $cubeGreen;
+    width: 35%;
+    & img {
+      width: 39px;
+      height: 27px;
+    }
+    & .block-wrap {
+      margin-right: 128px;
+    }
+
+    & .b-plus {
+      right: 130px;
+    }
+
+  }
+
+  .advantages-name {
+    & img {
+      margin: 0 16px 14px 16px;
+    }
+    & h3 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+  }
+  .block-wrap {
+    margin: 32px 26px;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    & .advantages-block {
+      flex-direction: column;
+      & .advantages-blocks {
+        width: 100%;
+        & .block-wrap {
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+      }
+      & .advantages-block__cloud {
+        .b-plus {
+          right: 43px;
+        }
+      }
+    }
+  }
+}
+
+//.advantages {
+//  color: $colorPrimaryFirst;
+//  font-size: 14px;
+//  width: 100%;
+//
+//  & .block-wrap {
+//    padding: 30px;
+//
+//
+//    & .button {
+//      width: 35px;
+//      height: 35px;
+//      position: absolute;
+//      right: 45px;
+//      bottom: 20px;
+//      border: none;
+//      border-radius: 0;
+//      background-color: #000000;
+//      opacity: 0.7;
+//      &::before {
+//        content: "";
+//        position: absolute;
+//        width: 20px;
+//        height: 4px;
+//        background-color: $colorPrimaryFirst;
+//      }
+//      &::after {
+//        content: "";
+//        position: absolute;
+//        width: 20px;
+//        height: 4px;
+//        background-color: $colorPrimaryFirst;
+//        transform: rotate(90deg);
+//      }
+//
+//      &:hover {
+//        opacity: 1;
+//        transition: 1s;
+//      }
+//    }
+//  }
+//
+//  & .advantages-name {
+//    margin-top: 20px;
+//  }
+//
+//  & .advantages-seo {
+//    background-color: $cubeBlack;
+//    height: 305px;
+//    position: relative;
+//
+//    & .block-wrap {
+//      margin-left: 150px;
+//    }
+//    & img {
+//      width: 28px;
+//      height: 34px;
+//      margin-left: 15px;
+//      margin-right: 10px;
+//    }
+//    & h3 {
+//      font-size: 22px;
+//      font-weight: 400;
+//    }
+//    & p {
+//      margin-top: 16px;
+//    }
+//  }
+//  & .advantages-responsive {
+//    height: 305px;
+//    background-color: $cubeRed;
+//    & img {
+//      width: 36px;
+//      height: 36px;
+//      margin-left: 15px;
+//      margin-right: 10px;
+//    }
+//    & h3 {
+//      font-size: 22px;
+//      font-weight: 400;
+//    }
+//  }
+//      & p {
+//      margin-top: 16px;
+//    }
+//
+//  & .advantages-cloud {
+//
+//    height: 305px;
+//    background-color: $cubeGreen;
+//    & .block-wrap {
+//      margin-right: 170px;
+//    }
+//    & img {
+//      width: 39px;
+//      height: 27px;
+//      margin-left: 15px;
+//      margin-right: 10px;
+//    }
+//    & h3 {
+//      font-size: 22px;
+//      font-weight: 400;
+//    }
+//        & p {
+//      margin-top: 16px;
+//    }
+//  }
+//}

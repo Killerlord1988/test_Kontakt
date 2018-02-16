@@ -1,0 +1,51 @@
+{% set list = [
+    {
+        id: 1,
+        title: "SEO Optimized",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make",
+        feature: "seo"
+
+    },
+    {
+        id: 2,
+        title: "Responsive",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make",
+        feature: "responsive"
+    },
+    {
+        id: 3,
+        title: "Cloud Services",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make",
+        feature: "cloud"
+    }
+] %}
+
+<section class="advantages">
+
+        <div class="advantages-block row">
+            {% for item in list %}
+
+            <div class="advantages-blocks  advantages-block__{{ item.feature }}">
+                <div class="block-wrap">
+                    <div class="advantages-name align-items-center row">
+                        <img src="/images/sprite/feature-{{ item.id }}.png" alt="планшет">
+                        <h3>{{ item.title }}</h3>
+                    </div>
+                    <p>{{ item.desc }}</p>
+                </div>
+                <button class="b-plus"></button>
+            </div>
+            {% endfor %}
+        </div>
+
+</section>
+

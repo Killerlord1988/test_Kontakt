@@ -1,0 +1,15 @@
+<header class="{{ headerClass }}" style="background-image: url(/images/slides/bg-header.png);">
+    <div class="container">
+        <div class="row">
+            <div class="logotype col-6">
+                <a href="index.html">
+                    <img src="/images/slides/logo.png" alt="Логотип" class="img-fluid">
+                </a>
+            </div>
+            <div class="header-nav-wrap col-6">
+                {% include './parts/header/nav.njk' %}
+            </div>
+        </div>
+    </div>
+    {% include './parts/header/join.njk' %}
+</header>

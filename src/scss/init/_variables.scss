@@ -1,0 +1,34 @@
+$sizeBase: 1rem;
+$spacer: $sizeBase;
+$fontSize: $sizeBase;
+$opacity: 1;
+$shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+$fontRegular: 400;
+$fontBold: 600;
+$fontSuperBold: 900;
+$fontFamily: 'OpenSans',
+sans-serif;
+$radiusBig: 5px;
+$radiusSmall: 3px;
+$colorPrimaryFirst: #fff;
+$colorPrimarySecond: #404040;
+$colorLink: #68a8de;
+$colorLinkHover: #fff;
+$cubeOrange: #ee732f;
+$cubeRed: #f74c55;
+$cubeGreen: #2d5f3b;
+$cubeBlack: $colorPrimarySecond;
+$cubePink: #fb636b;
+$indexL: 1000;
+$indexM: 500;
+$indexS: 200;
+$font-family-sans-serif: 'OpenSans',
+-apple-system,
+system-ui,
+BlinkMacSystemFont,
+Roboto,
+Arial,
+sans-serif;
+$grid-gutter-width-base: $spacer*2;
+$grid-breakpoints: ( xs: 0, xms: 375px, xm: 480px, sm: 768px, bmd: 920px, md: 1025px, mlg: 1280px, lg: 1367px, xl: 1681px);
+$container-max-widths: (xms: 375, xm: 480px, sm: 768px, bmd: 920px, md: 1092px, mlg: 1200px, lg:1280px, xl: 1536px);

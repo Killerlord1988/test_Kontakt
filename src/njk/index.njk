@@ -1,0 +1,12 @@
+{% set headerClass = "page-header" %}
+{% set nameBase = "The products." %}
+
+{% extends "template/layout.njk" %}
+
+{% block content %}
+    <main class="main-page">
+        {% include "partials/section/base.njk" %}
+        {% include "partials/section/advantages.njk" %}
+        {% include "partials/section/b-music.njk" %}
+    </main>
+{% endblock %}

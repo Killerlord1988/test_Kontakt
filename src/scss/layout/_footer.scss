@@ -1,0 +1,21 @@
+.page-footer {
+  position: relative;
+  min-height: 75px;
+
+  & .line-bottom {
+    height: 5px;
+    width: 100%;
+  }
+
+  & .copyright {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
